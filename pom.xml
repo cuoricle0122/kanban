@@ -44,6 +44,11 @@
       <artifactId>mybatis</artifactId>
       <version>3.5.13</version>
     </dependency>
+    <dependency> <!-- MyBatis TypeHandlers JSR-310 -->
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-typehandlers-jsr310</artifactId>
+      <version>1.0.2</version>
+    </dependency>
     <dependency> <!-- slf4j api -->
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
