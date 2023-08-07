@@ -20,7 +20,7 @@
       - regDt DATETIME DEFAULT NOW() : 작업 등록 일시
       - modDt DATETIME : 작업 수정일시
 * 레이아웃 구성
-* 모델, 뷰, 컨트롤러 구성하기 (MVC)
+* 모델, 뷰, 컨트롤러 개념 (MVC)
   - M(모델, Model) : 기능 (Service)
     - DTO(Data Transfer Object) : 데이터 전달용 객체
       - VO(Value Object)
@@ -38,8 +38,12 @@
     - 작업관리 컨트롤러
       - 작업목록 - /works
       - 작업등록 - /works/add
-      - 작업수정 - /works/등록번호
-      - 작업삭제 - /works/등록번호/delete
-  - 모델 구성
-  - 뷰 구성
+      - 작업조회 - /works/작업번호
+      - 작업수정 - /works/edit/등록번호
+      - 작업삭제 - /works/delete/등록번호
+
+## 3일차
+* 모델 구성
+* 뷰 구성
+* 칸반 등록, 수정, 삭제, 조회
     
