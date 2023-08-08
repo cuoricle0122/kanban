@@ -3,7 +3,6 @@ package models.works;
 import configs.DBConnection;
 import org.apache.ibatis.session.SqlSession;
 
-import javax.swing.*;
 import java.util.List;
 
 public class WorkDao {
@@ -26,6 +25,7 @@ public class WorkDao {
         }
 
         sqlSession.commit();
+
         return affectedRows > 0;
     }
 
@@ -48,8 +48,8 @@ public class WorkDao {
     }
 
     /**
-     * 개별 조회
-     *
+     * 개별 조회 
+     * 
      * @param workNo
      * @return
      */
@@ -73,7 +73,7 @@ public class WorkDao {
     public List<Work> gets(Work work) {
         SqlSession sqlSession = DBConnection.getSession();
 
-        List<Work> items = sqlSession.selectList("WorkListMapper.List", work);
+        List<Work> items = sqlSession.selectList("WorkListMapper.list", work);
 
         return items;
     }
