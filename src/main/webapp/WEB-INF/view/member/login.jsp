@@ -1,12 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ taglib prefix="layout" tadir="/WEB-INF/tags/layouts" %>
+<%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layouts" %>
 <c:url var="action" value="/member/login" />
 <c:url var="joinUrl" value="/member/join" />
-<c:url var="findIdUrl" value="/member/find_Id" />
-<c:url var="findPwUrl" value="/member/find_Pw" />
+<c:url var="findIdUrl" value="/member/find_id" />
+<c:url var="findPwUrl" value="/member/find_pw" />
 <layout:main title="로그인">
-    <form method="POST" action="${action}" autocomplete="off">
+    <form name="frmLogin" method="POST" action="${action}" autocomplete="off">
         <dl>
             <dt>아이디</dt>
             <dd>
@@ -16,7 +16,7 @@
         <dl>
             <dt>비밀번호</dt>
             <dd>
-                <input tpye="password" name="userPw">
+                <input type="password" name="userPw">
             </dd>
         </dl>
         <div>
