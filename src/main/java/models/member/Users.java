@@ -4,13 +4,13 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Data 
+@Data
 public class Users {
-    private long UserNo; //회원 번호
+    private long UserNo; // 회원번호
     private String userId; // 아이디
     private String userPw; // 비밀번호
     private String userNm; // 사용자명
-    private String email; 
+    private String email;
     private String mobile;
     private LocalDateTime regDt; // 가입일자
     private LocalDateTime modDt; // 수정일자
