@@ -1,12 +1,13 @@
 package controllers.works;
 
 import commons.UrlUtils;
-import static commons.ScriptUtils.alertError;
 import controllers.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import models.works.DeleteService;
 import models.works.WorkServiceManager;
+
+import static commons.ScriptUtils.alertError;
 
 public class DeleteController implements Controller {
     @Override
@@ -14,9 +15,9 @@ public class DeleteController implements Controller {
         try {
             DeleteService deleteService = WorkServiceManager.getInstance().deleteService();
             long workNo = UrlUtils.getPatternData(req, "delete/(\\d*)");
-            deleteService.delete(workNo);
+            deleteService.delete(workNo, req);
 
-            // 성공시 → 목록 이동
+            // 성공시 -> 목록 이동
             resp.sendRedirect(req.getContextPath() + "/works");
         } catch (Exception e) {
             alertError(resp, e, -1);
@@ -25,6 +26,8 @@ public class DeleteController implements Controller {
 
     @Override
     public void post(HttpServletRequest req, HttpServletResponse resp) {
-
+        get(req, resp);
     }
+
+
 }
