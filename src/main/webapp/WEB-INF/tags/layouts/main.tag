@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layouts" %>
 <%@ attribute name="title" %>
-<fmt:setBundle basename="message.commons" />
+<fmt:setBundle basename="messages.commons" />
 <c:url var="mainUrl" value="/" />
 <c:url var="loginUrl" value="/member/login" />
 <c:url var="logoutUrl" value="/member/logout" />
@@ -31,8 +31,8 @@
                 <c:if test="${isLogin}">
                     <span class="userinfo">
                         <fmt:message key="LOGIN.MESSAGE">
-                            <fmt:param>${sessionScope.users.userNm}</fmt:param>
-                            <fmt:param>${sessionScope.users.userId}</fmt:param>
+                            <fmt:param>${userInfo.userNm}</fmt:param>
+                            <fmt:param>${userInfo.userId}</fmt:param>
                         </fmt:message>
                     </span>
                     <a href="${workListUrl}">

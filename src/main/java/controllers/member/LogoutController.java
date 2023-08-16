@@ -8,10 +8,11 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class LogoutController implements Controller {
+
     @Override
     public void get(HttpServletRequest req, HttpServletResponse resp) {
         HttpSession session = req.getSession();
-        session.invalidate();
+        session.invalidate(); // 세션 비우기
 
         try {
             resp.sendRedirect(req.getContextPath() + "/member/login");

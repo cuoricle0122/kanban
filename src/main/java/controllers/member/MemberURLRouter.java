@@ -26,7 +26,7 @@ public class MemberURLRouter implements URLRouter {
             controller = new InfoController();
         } else if (mode.equals("find_id")) { // 아이디 찾기
             controller = new FindIdController();
-        } else if (mode.equals("find_Pw")) { // 비밀번호 찾기
+        } else if (mode.equals("find_pw")) { // 비밀번호 찾기
             controller = new FindPwController();
         } else if (mode.equals("logout")) { // 로그아웃
             controller = new LogoutController();
