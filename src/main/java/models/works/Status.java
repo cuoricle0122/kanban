@@ -21,10 +21,10 @@ public enum Status {
 
     public static List<String[]> getList() {
         List<String[]> items = new ArrayList<>();
-        items.add(new String[] {READY.name(), READY.getStatus()});
-        items.add(new String[] {PROGRESS.name(), PROGRESS.getStatus()});
-        items.add(new String[] {DONE.name(), DONE.getStatus()});
-        items.add(new String[] {POSTPONE.name(), POSTPONE.getStatus()});
+        items.add(new String[] { READY.name(), READY.getStatus()});
+        items.add(new String[] { PROGRESS.name(), PROGRESS.getStatus()});
+        items.add(new String[] { DONE.name(), DONE.getStatus()});
+        items.add(new String[] { POSTPONE.name(), POSTPONE.getStatus()});
 
         return items;
     }

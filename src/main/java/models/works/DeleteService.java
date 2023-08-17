@@ -12,14 +12,14 @@ public class DeleteService {
 
     public void delete(long workNo, HttpServletRequest req) {
 
-        if (!workDao.exists(workNo)){
+        if (!workDao.exists(workNo)) {
             throw new WorkNotFoundException();
         }
 
         Work work = workDao.get(workNo);
         MemberUtil.isMine(req, work.getUserNo()); // 본인 작업 내용만 삭제 가능 체크
 
-        if (!workDao.delete(workNo)){
+        if (!workDao.delete(workNo)) {
             throw new WorkDeleteException();
         }
     }
