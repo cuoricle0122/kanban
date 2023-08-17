@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Users {
-    private long UserNo; // 회원번호
+    private long userNo; // 회원번호
     private String userId; // 아이디
     private String userPw; // 비밀번호
     private String userNm; // 사용자명
